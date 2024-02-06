@@ -1,0 +1,7 @@
+opencv-python
+scikit-learn
+matplotlib
+numpy
+pandas
+scipy
+myst-parser
