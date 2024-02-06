@@ -12,10 +12,14 @@ Using a calibrated colorchart image, it's possible to adjust a gamma function to
 
 Note: the colorchart must be properly aligned in the image to accurately obtain the values of each patch in the image.
 
-![v2](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/raw/main/assets/32850913/17227fb9-9e57-4779-aa1f-ad2e1d024466.png)
+![v2](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/assets/32850913/9f1a183e-3902-4aad-9a56-a5d022d66b24)
+
 
 For a different colorchart, the average RGB values of each patch on the grayscale scale, ranging from black to white, should be added to a .csv file in column A. /reference_RGB_Logitech_gray.csv/
 
 The results are:
 
-![Figure_1](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/raw/main/assets/32850913/70d005df-2cd0-4a72-b7c5-73ba88076e3c.png)
+![Figure_1](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/assets/32850913/7af1f87b-3e88-4c3a-9389-c3f42e37b599)
+
+
+
