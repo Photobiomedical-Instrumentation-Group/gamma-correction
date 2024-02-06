@@ -23,19 +23,21 @@ The results are:
 
 
 The according the reference [TAKAHASHI, Masato et al.]
+
 First, we extract the color chart part of the photograph using AR markers. The portions of each square are further taken and averaged. The model is created through a multiple regression from the difference between the averaged numbers and the reference RGB values. Based on this, all pixels are converted to correct the color of the human face and tongue.
 
 The details of the gamma correction are next described. First, such correction is applied based on the luminance of the grayscale portion of the color chart measured by a colorimeter against the RGB value when the grayscale was photographed. Similarly, this is also conducted for the grayscale portion of the reference RGB value. Next, a gamma correction is applied for each RGB. In the case of R, the form is as shown in Eq:
 
 
-R_{c} = aY^{\gamma} + b
+![eq1](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/assets/32850913/49261cd3-c92b-4a1b-b774-36e08afbf8bb)
 
 
 where Rc is the R-value of the image taken, and Y is the luminance of the color chart’s grayscale. In the grayscale of the color chart, the brightness of the grayscale is transformed to within the range of zero to 1 by normalizing with the brightness value of white such that black has a value zero and white has a value of 1. This model can be used to correct the gamma for any RGB value. Specifically, we compute the gamma-corrected RGB values by multiplying the inverse function of Eq. (6) for each value.
 
-Next, we construct a model using multiple regression on the color of each gamma-corrected color patch. In the case of R, we have Eq. (7):
+Next, we construct a model using multiple regression on the color of each gamma-corrected color patch. In the case of R, we have Eq.:
 
-R′_{c}=aRr+bGr+cBr+d
+![eq2](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/assets/32850913/a07c060f-3d53-4ce1-b0c0-b13e62ba0222)
+
 
 where R'c is the R value of the corrected image and Rr, Gr, Br indicate an un-corrected RGB value. Each parameter is calculated by a multiple regression with every color patch.
 
