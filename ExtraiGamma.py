@@ -44,7 +44,7 @@ def inv_gamma_fit(x,a,b,c):
 
 
 # Carregue a imagem
-name_smp ='Natansol.jpeg'
+name_smp ='v2.jpg'
 img_smp = cv2.imread(name_smp)
 color_smp = (gc.getColorChart(img_smp))/255.0
 
