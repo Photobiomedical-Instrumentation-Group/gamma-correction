@@ -12,7 +12,8 @@ Using a calibrated colorchart image, it's possible to adjust a gamma function to
 The adjustment of the function takes into consideration the reference RGB values of the colorchart and the values of the image.
 Note: the colorchart must be properly aligned in the image to accurately obtain the values of each patch in the image.
 
-![v2](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/assets/32850913/17227fb9-9e57-4779-aa1f-ad2e1d024466){ width=200px }
+![v2](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/raw/main/assets/32850913/17227fb9-9e57-4779-aa1f-ad2e1d024466.png){ width=300px }
+
 
 
 
