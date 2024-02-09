@@ -1,17 +1,18 @@
 
 # -*- coding: utf-8 -*-
 """
-3. Encontra valores de Gamma
-Método 2, ajusta gamma foto com referencia. 
+Encontra valores de Gamma
+Método 2: ajusta gamma de foto com referencia. 
 Ver se referencia esta correta
 
 Created on Wed Apr  11 13:20:11 2020
+@author: takar and rpsb
 Atualizado em 12-09-23 Raquel Pantojo
 
 se tiver erro no aruco:
 pip install opencv-contrib-python==4.7.0.68 opencv-python==4.7.0.68
 pip install opencv-contrib-python-headless
-@author: takar
+
 """
 
 
