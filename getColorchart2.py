@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Apr  8 20:41:08 2020
-
-@author: takar
+@author: takar and rpsb
+Atualizado em 12-09-23 Raquel Pantojo
 """
 
 import cv2
