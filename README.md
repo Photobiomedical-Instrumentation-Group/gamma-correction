@@ -19,7 +19,8 @@ For a different colorchart, the average RGB values of each grayscale patch, rang
 
 In this work, the RGB values of each patch were acquired using a colorimeter (Delta Color). 
 
--`L*a*b` values were acquired for each grayscale patch and transformed into RGB.
+`L*a*b` values were acquired for each grayscale patch and transformed into RGB.
+
 In Excel (`(/reference_RGB_Logitech_gray.csv/)`), save the average RGB values of each patch, the first value of the blackest patch and the last value of the white patch.
 
 For analysis, the code -`getColorchart2.py` reads the grayscale values of the 6 patches and compares them with the expected values.
