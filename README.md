@@ -22,7 +22,9 @@ In this work, the RGB values of each patch were acquired using a colorimeter (De
 -`L*a*b` values were acquired for each grayscale patch and transformed into RGB.
 In Excel, save the average RGB values of each patch, the first value of the blackest patch and the last value of the white patch.
 
-The results are:
+For analysis, the code -`getColorchart2.py` reads the grayscale values of the 6 patches and compares them with the expected values.
+
+## The results are:
 
 ![Figure_1](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/assets/32850913/7af1f87b-3e88-4c3a-9389-c3f42e37b599)
 
