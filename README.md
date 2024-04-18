@@ -15,7 +15,12 @@ Note: the colorchart must be properly aligned in the image to accurately obtain 
 ![v2](https://github.com/Photobiomedical-Instrumentation-Group/gamma-correction/assets/32850913/9f1a183e-3902-4aad-9a56-a5d022d66b24)
 
 
-For a different colorchart, the average RGB values of each patch on the grayscale scale, ranging from black to white, should be added to a .csv file in column A. /reference_RGB_Logitech_gray.csv/
+For a different colorchart, the average RGB values of each grayscale patch, ranging from black to white, must be added to a .csv file in column (A) -`(/reference_RGB_Logitech_gray.csv/)`.
+
+In this work, the RGB values of each patch were acquired using a colorimeter (Delta Color). 
+
+-`L*a*b` values were acquired for each grayscale patch and transformed into RGB.
+In Excel, save the average RGB values of each patch, the first value of the blackest patch and the last value of the white patch.
 
 The results are:
 
