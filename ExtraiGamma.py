@@ -45,7 +45,7 @@ def inv_gamma_fit(x,a,b,c):
 
 
 # Carregue a imagem
-name_smp ='v2.jpg'
+name_smp ='GammaDesp10.jpg'
 img_smp = cv2.imread(name_smp)
 color_smp = (gc.getColorChart(img_smp))/255.0
 
@@ -62,11 +62,11 @@ for i in range(6):
 
 
 # Valores iniciais para todos os canais
-initial_guess = [0.1, 0.1, 0.1]
+initial_guess = [1, 0.5, 0]
 
-param_smp_R, c_r = curve_fit(gamma_fit, color_ref[0:6, 2], color_smp[0:6, 2])
-param_smp_G, c_g = curve_fit(gamma_fit, color_ref[0:6, 1], color_smp[0:6, 1])
-param_smp_B, c_b = curve_fit(gamma_fit, color_ref[0:6, 0], color_smp[0:6, 0])
+param_smp_R, c_r = curve_fit(gamma_fit, color_ref[0:6, 2], color_smp[0:6, 2],maxfev=10000)
+param_smp_G, c_g = curve_fit(gamma_fit, color_ref[0:6, 1], color_smp[0:6, 1],maxfev=10000)
+param_smp_B, c_b = curve_fit(gamma_fit, color_ref[0:6, 0], color_smp[0:6, 0],maxfev=10000)
 
 
 # calculo do gamma:
@@ -146,7 +146,7 @@ df_color_smp = pd.DataFrame(data=color_smp, columns=['Canal R', 'Canal G', 'Cana
 df_color_ref = pd.DataFrame(data=color_ref, columns=['Canal R', 'Canal G', 'Canal B'])
 
 #Salva dados no arquivo do Excel
-nome_arquivo_excel = 'Diferentesposições.xlsx'
+nome_arquivo_excel = 'Resultados.xlsx'
 
 
 # Criar um objeto ExcelWriter para gravar múltiplas planilhas no mesmo arquivo
