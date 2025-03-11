@@ -11,7 +11,7 @@ import numpy as np
 
 def getColorChart(img):
     
-    dictionary = aruco.getPredefinedDictionary(aruco.DICT_4X4_50)
+    dictionary = aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
     
     
     corners, ids, rejectedImgPoints = aruco.detectMarkers(img, dictionary)

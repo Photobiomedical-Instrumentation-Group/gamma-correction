@@ -45,7 +45,7 @@ def inv_gamma_fit(x,a,b,c):
 
 
 # Carregue a imagem
-name_smp ='GammaDesp10.jpg'
+name_smp ='v2.jpg'
 img_smp = cv2.imread(name_smp)
 color_smp = (gc.getColorChart(img_smp))/255.0
 
@@ -115,8 +115,12 @@ plt.subplot(131)
 plt.plot(fit_xR, fit_yR, color='r', label='Valores Ajustados', linewidth=2)
 plt.scatter(color_ref[0:6, 2], color_smp[0:6, 2])
 plt.legend()
-plt.xlabel('Intensidade do canal R da Referência do Colorímetro',fontsize=16)
-plt.ylabel('Intensidade do canal R da Image',fontsize=16)
+plt.xlabel('Canal R da Referência',fontsize=16)
+plt.ylabel('Canal R da Image',fontsize=16)
+plt.xticks(fontsize=16)
+plt.yticks(fontsize=16)
+plt.xlim([0,1])
+plt.ylim([0,1])
 plt.title('CANAL R - Gamma: {:.3f}, R²: {:.3f}'.format(param_smp_R[1], r_squared_R))
 
 plt.subplot(132)
@@ -124,21 +128,30 @@ plt.subplot(132)
 plt.plot(fit_xG, fit_yG, color='g', label='Valores Ajustados', linewidth=2)
 plt.scatter(color_ref[0:6, 1], color_smp[0:6, 1])
 plt.legend()
-plt.xlabel('Intensidade do canal G da Referência do Colorímetro',fontsize=16)
-plt.ylabel('Intensidade do canal G da Image',fontsize=16)
+plt.xlabel('Canal G da Referência',fontsize=16)
+plt.ylabel('Canal G da Image',fontsize=16)
+plt.xticks(fontsize=16)
+plt.yticks(fontsize=16)
+plt.xlim([0,1])
+plt.ylim([0,1])
 plt.title('CANAL G - Gamma: {:.3f}, R²: {:.3f}'.format(param_smp_G[1], r_squared_G))
+
 
 plt.subplot(133)
 plt.plot(fit_xB, fit_yB, color='b', label='Valores Ajustados', linewidth=2)
 plt.scatter(color_ref[0:6, 0], color_smp[0:6,0])
 plt.legend()
-plt.xlabel('Intensidade do canal B da Referência do Colorímetro',fontsize=16)
-plt.ylabel('Intensidade do canal B da Image',fontsize=16)
+plt.xlabel('Canal B da Referência',fontsize=16)
+plt.ylabel('Canal B da Image',fontsize=16)
+plt.xticks(fontsize=16)
+plt.yticks(fontsize=16)
+plt.xlim([0,1])
+plt.ylim([0,1])
 plt.title('CANAL B - Gamma: {:.3f}, R²: {:.3f}'.format(param_smp_B[1], r_squared_B))
 
 plt.tight_layout()
+plt.savefig('imagemRGB',dpi=600)
 plt.show()
-plt.savefig('imagemRGB')
 
 
 
